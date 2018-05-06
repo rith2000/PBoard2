@@ -1,10 +1,18 @@
 package piano;
 
+import javax.swing.*;
+
+import java.awt.Graphics;
+import java.awt.Point;
+import java.util.ArrayList;
 
 public class Recorder {
 
 	private static int MEASURE_NUMBER;
 	private final int BEATS_PER_MEASURE;
+	private ArrayList<Key> keysRecorded;
+	private ArrayList<Point> measAndBeat;
+
 
 	
 	public Recorder(int beats) {
@@ -12,8 +20,15 @@ public class Recorder {
 
 	}
 	
-	public void record(Piano p, int measNum, int beat) {
+	public void record(Key k, int measNum, int beat) {
+		measAndBeat.add(new Point(measNum, beat));
+		keysRecorded.add(k);
 		
+	}
+	
+	public void draw(Graphics g, ArrayList<Point> p, ArrayList<Key> k) {
+		
+		//g.paint
 	}
 
 }
