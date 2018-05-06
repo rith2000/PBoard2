@@ -14,7 +14,9 @@ public class Key extends JPanel{
 	
 	private String letter;
 	private Sound sound;
-	private int width, height; 
+	private boolean isPressed;
+	private boolean isBlack;
+	private int width, height;
 	
 	
 	/**
@@ -23,20 +25,31 @@ public class Key extends JPanel{
 	 * @param s the sound specified by the key
 	 * 
 	 */
-	public Key(String l, Sound s, int w, int h) {
+	public Key(String l, Sound s, boolean isBlack) {
 		letter = l;
 		sound = s; 
-		width = w;
-		height = h;
+		isPressed = false;
+		this.isBlack = isBlack;
+		if(isBlack) {
+			//change width and height
+		}
+		else {
+			//change width and height
+		}
 	}
 	
-	//isPressed() not finished
 	/**
-	 * Returns if the key has been pressed.
-	 * @return true or false if a user has pressed this key
+	 * Sets isPressed to true when this piano key is pressed
 	 */
-	public boolean isPressed() {
-		return false;
+	public void keyPressed() {
+		isPressed = true;
+	}
+	
+	/**
+	 * Set isPressed to false when this piano key is not pressed
+	 */
+	public void keyReleased() {
+		isPressed = false;
 	}
 	
 	/**
