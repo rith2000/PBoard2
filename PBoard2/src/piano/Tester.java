@@ -1,11 +1,15 @@
 package piano;
 
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import java.util.Scanner;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,6 +32,7 @@ public class Tester {
 		   }
 
 		   in.close();
+
 	}
 }
 

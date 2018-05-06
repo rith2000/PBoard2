@@ -10,9 +10,9 @@ import javax.swing.*;
  * @author rithika, amanda, and keertana
  *4/5/18 V1
  */
-public class Key extends JPanel{
+public class Key {
 	
-	private String letter;
+	private String pianoLetter;
 	private Sound sound;
 	private boolean isPressed;
 	private boolean isBlack;
@@ -26,14 +26,18 @@ public class Key extends JPanel{
 	 * 
 	 */
 	public Key(String l, Sound s, boolean isBlack) {
-		letter = l;
+		pianoLetter = l;
 		sound = s; 
 		isPressed = false;
 		this.isBlack = isBlack;
 		if(isBlack) {
+			width = (int) (0.5 * 30);
+			height = (int) (3.5 * 30);
 			//change width and height
 		}
 		else {
+			width = (int) (0.8 *30);
+			height = (int) (5.5 * 30);
 			//change width and height
 		}
 	}
@@ -57,7 +61,7 @@ public class Key extends JPanel{
 	 * @return the letter as a String
 	 */
 	public String getLetter() {
-		return letter;
+		return pianoLetter;
 	}
 	
 	/**
@@ -73,7 +77,7 @@ public class Key extends JPanel{
 	 * @return letter as a String
 	 */
 	public String toString() {
-		return letter;
+		return pianoLetter;
 	}
 	
 	
@@ -85,19 +89,26 @@ public class Key extends JPanel{
 	 * @post calls super.paintComponent, makes rectangle of (x,y,width, height) to draw key, 
 	 * has sharp notes filled in black and normal notes filled in white, outline color of key is black.
 	 */
-		public void paintComponent(Graphics g, int x, int y)  
+		public void draw(Graphics g, int x, int y)  
 		{
-			super.paintComponent(g);
+			
+			
+			if(isPressed)
+				g.setColor(Color.YELLOW);
+			else if(!isBlack) 
+				g.setColor(Color.WHITE);
+			else
+				g.setColor(Color.BLACK); 
+			
+			g.fillRect(x, y, width, height); 
+				
 			
 			g.setColor(Color.BLACK); 
-			g.drawRect(x, y, width, height);
+			g.drawRect(x, y, width, height); //black outline for each key
 			
-			if(letter.length() == 1) 
-				g.setColor(Color.WHITE);
-			else 
-				g.setColor(Color.BLACK);
+			
 		
-			g.fillRect(x, y, width, height); 
+			
  
 			
 		}

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Recorder {
 
-	private static int MEASURE_NUMBER;
+	private static int MEASURE_NUMBER = 1;
 	private final int BEATS_PER_MEASURE;
 	private ArrayList<Key> keysRecorded;
 	private ArrayList<Point> measAndBeat;
