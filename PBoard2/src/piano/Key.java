@@ -32,12 +32,12 @@ public class Key {
 		this.isBlack = isBlack;
 		if(isBlack) {
 			width = (int) (0.5 * 75);
-			height = (int) (3.5 * 75);
+			height = (int) (3.5 * 75 *.5);
 			//change width and height
 		}
 		else {
 			width = (int) (0.8 *75);
-			height = (int) (5.5 * 75);
+			height = (int) (5.5 * 75 * .5);
 			//change width and height
 		}
 	}
@@ -119,6 +119,9 @@ public class Key {
 			
 			g.setColor(Color.BLACK); 
 			g.drawRect(x, y, width, height); //black outline for each key
+			
+			
+		
 			
 			
 		

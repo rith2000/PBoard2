@@ -46,7 +46,7 @@ public class Piano {
 	
 	public void draw(Graphics g) {
 		 int x = GamePanel.DRAWING_WIDTH/2 - 230;
-		 int y = 150;
+		 int y = GamePanel.DRAWING_HEIGHT - GamePanel.DRAWING_HEIGHT/2;
 		 int width = octave[0].getWidth();
 		for(int i = 0; i<octave.length; i++) {
 			octave[i].draw(g, x, y);
