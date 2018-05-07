@@ -31,13 +31,13 @@ public class Key {
 		isPressed = false;
 		this.isBlack = isBlack;
 		if(isBlack) {
-			width = (int) (0.5 * 30);
-			height = (int) (3.5 * 30);
+			width = (int) (0.5 * 75);
+			height = (int) (3.5 * 75);
 			//change width and height
 		}
 		else {
-			width = (int) (0.8 *30);
-			height = (int) (5.5 * 30);
+			width = (int) (0.8 *75);
+			height = (int) (5.5 * 75);
 			//change width and height
 		}
 	}
@@ -70,6 +70,20 @@ public class Key {
 	 */
 	public Sound getSound() {
 		return sound;
+	}
+	
+	/**
+	 * @return width of key
+	 */
+	public int getWidth() {
+		return width;
+	}
+	
+	/**
+	 * @return height of key
+	 */
+	public int getHeight() {
+		return height;
 	}
 	
 	/**
