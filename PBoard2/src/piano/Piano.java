@@ -2,6 +2,8 @@ package piano;
 
 import java.awt.Graphics;
 
+import gui.GamePanel;
+
 public class Piano {
 
 	private Key[] octave;
@@ -43,7 +45,7 @@ public class Piano {
 	}
 	
 	public void draw(Graphics g) {
-		 int x = 20;
+		 int x = GamePanel.DRAWING_WIDTH/2 - 230;
 		 int y = 150;
 		 int width = octave[0].getWidth();
 		for(int i = 0; i<octave.length; i++) {
@@ -51,7 +53,7 @@ public class Piano {
 			x+= width;
 		}
 		
-		int x2 = 2*width/3 + 20;
+		int x2 = 2*width/3 + GamePanel.DRAWING_WIDTH/2 - 230;
 		for(int i = 0; i<2; i++) {
 			sharps[i].draw(g, x2, y);
 			x2+= width;
