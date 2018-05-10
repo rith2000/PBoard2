@@ -21,15 +21,14 @@ public class GamePanel extends JPanel implements KeyListener{
 	public static final int DRAWING_WIDTH = 800;
 	public static final int DRAWING_HEIGHT = 600;
 	
-	private Key C4, CSharp;
+	
 	private Piano piano;
 	
 	
 	
 	 public GamePanel () {
 		 super();
-		 C4 = new Key("C", new Sound(""), false);
-		 CSharp = new Key("C#", new Sound(""), true);
+		
 		 piano = new Piano();
 		  setBackground(Color.WHITE);
 		 

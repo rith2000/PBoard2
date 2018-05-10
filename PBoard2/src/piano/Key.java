@@ -13,6 +13,7 @@ import javax.swing.*;
 public class Key {
 	
 	private String pianoLetter;
+	private String keyboardLetter;
 	private Sound sound;
 	private boolean isPressed;
 	private boolean isBlack;
@@ -25,9 +26,10 @@ public class Key {
 	 * @param s the sound specified by the key
 	 * 
 	 */
-	public Key(String l, Sound s, boolean isBlack) {
+	public Key(String l, String k, Sound s, boolean isBlack) {
 		pianoLetter = l;
 		sound = s; 
+		keyboardLetter = k;
 		isPressed = false;
 		this.isBlack = isBlack;
 		if(isBlack) {
@@ -60,8 +62,16 @@ public class Key {
 	 * Returns the identifying letter of the key.
 	 * @return the letter as a String
 	 */
-	public String getLetter() {
+	public String getPianoLetter() {
 		return pianoLetter;
+	}
+	
+	/**
+	 * Returns the keyboard letter that corresponds to the key.
+	 * @return the letter as a String
+	 */
+	public String getKeyboardLetter() {
+		return keyboardLetter;
 	}
 	
 	/**
@@ -120,6 +130,7 @@ public class Key {
 			g.setColor(Color.BLACK); 
 			g.drawRect(x, y, width, height); //black outline for each key
 			
+			//g.drawString(pianoLetter, x, y + height);
 			
 		
 			
