@@ -10,6 +10,8 @@ import javax.swing.*;
  * @author rithika, amanda, and keertana
  *4/5/18 V1
  */
+
+//keertana is annoying
 public class Key {
 	
 	private String pianoLetter;
